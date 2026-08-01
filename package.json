@@ -19,7 +19,7 @@
     "react-dom": "^18.3.1",
     "react-intersection-observer": "^9.15.0",
     "react-lazy-load-image-component": "^1.6.3",
-    "styled-components": "^6.1.14",
+    "styled-components": "^6.4.4",
     "swiper": "^12.1.2",
     "tailwind-merge": "^2.6.0"
   },
@@ -34,7 +34,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
-    "postcss": "^8.4.49",
+    "postcss": "^8.5.25",
     "tailwindcss": "^3.4.17",
     "vite": "^8.0.16"
   }
