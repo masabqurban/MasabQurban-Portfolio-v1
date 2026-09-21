@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Download = () => {
   return (
     <StyledWrapper>
-      <a href='./Masab Qurban Resume.pdf' className="button">
+      <a href='/Masab Qurban Resume.pdf' target="_blank" rel="noopener noreferrer" className="button">
         <span className="button_lg">
           <span className="button_sl" />
           <span className="button_text">Download Resume</span>

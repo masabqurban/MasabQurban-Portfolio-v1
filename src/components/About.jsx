@@ -1,55 +1,63 @@
 // Popup.js
 import React from 'react';
-import mypicture from '../assets/mypic.png'
-import react from '../assets/react.svg'
 import Button from './closebutton';
-import tailwind from '../assets/tailwindcsslogo.svg'
-import laravel from '../assets/laravellogo.svg'
-import mypic2 from '../assets/mypic2.png'
+import mypic2 from '../assets/mypic2.png';
 import Download from './downloadbutton';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-
 const Popup = ({ close }) => {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
-      <div className="">
-
-        {/* Content Section */}
-        <div className="md:max-w-6xl w-full md:h-fit relative px-5 md:px-10 py-1 md:py-5 flex flex-col-reverse md:grid md:grid-cols-2 max-h-[80vh] overflow-y-scroll md:overflow-y-hidden">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-3 sm:p-6"
+      onClick={close}
+    >
+      <div
+        className="relative w-full max-w-5xl max-h-[90vh] overflow-hidden rounded-sm shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 max-h-[90vh] md:max-h-[min(90vh,720px)]">
           {/* About Me Section */}
-          <div className='relative h-full bg-[#ececec] text-black p-5 lg:p-20 overflow-hidden'>
-            <span className='z-0 text-[190px] absolute -top-14 -right-24 text-[#e6e6e6] font-bold heading-font'>ABOUT</span>
-            <h2 className="relative z-10 text-[#1595b6] text-3xl md:text-4xl font-semibold font-lexend">ABOUT ME</h2>
-            <h2 className="relative z-10 text-[#1595b6] text-lg mb-2 md:mb-4 font-HubotSans font-medium">Software Engineer | Full Stack Architect</h2>
-            <p className="mb-2 md:mb-4 relative z-10 font-HubotSans font-medium text-sm md:text-base">
+          <div className="relative bg-[#ececec] text-black overflow-y-auto order-2 md:order-1 max-h-[55vh] md:max-h-[min(90vh,720px)] p-5 sm:p-8 lg:p-10">
+            <span className="pointer-events-none z-0 text-[120px] sm:text-[160px] absolute -top-8 -right-16 text-[#e6e6e6] font-bold heading-font select-none">
+              ABOUT
+            </span>
+
+            <h2 className="relative z-10 text-[#1595b6] text-2xl sm:text-3xl lg:text-4xl font-semibold font-lexend">
+              ABOUT ME
+            </h2>
+            <p className="relative z-10 text-[#1595b6] text-sm sm:text-base mb-3 font-HubotSans font-medium">
+              Software Engineer | Full Stack Architect
+            </p>
+            <p className="relative z-10 mb-4 font-HubotSans font-medium text-sm leading-relaxed">
               Full-Stack Engineer passionate about crafting digital experiences that drive business value. I build scalable SaaS platforms and high-performance web apps with React.js, Next.js, Node.js, and PostgreSQL — sharp interfaces, solid backends, and systems that hold up in production.
             </p>
 
-            <div className="relative z-10 mb-3 md:mb-5">
-              <h3 className="text-[#1595b6] text-base md:text-lg font-semibold font-lexend mb-2">Experience</h3>
-              <ul className="space-y-2 font-HubotSans font-medium text-sm md:text-base">
+            <div className="relative z-10 mb-4">
+              <h3 className="text-[#1595b6] text-base font-semibold font-lexend mb-2">
+                Experience
+              </h3>
+              <ul className="space-y-2 font-HubotSans font-medium text-sm">
                 <li>
-                  <span className="font-semibold">Senior Software Engineer</span>
-                  <span className="block text-black/70">VendAxis FZ-LLC · Feb 2026 - Present</span>
+                  <span className="font-semibold block">Senior Software Engineer</span>
+                  <span className="text-black/65 text-[13px]">VendAxis FZ-LLC · Feb 2026 - Present</span>
                 </li>
                 <li>
-                  <span className="font-semibold">Software Engineer (Full Stack)</span>
-                  <span className="block text-black/70">VendAxis FZ-LLC · Feb 2025 - Jan 2026</span>
+                  <span className="font-semibold block">Software Engineer (Full Stack)</span>
+                  <span className="text-black/65 text-[13px]">VendAxis FZ-LLC · Feb 2025 - Jan 2026</span>
                 </li>
                 <li>
-                  <span className="font-semibold">Frontend Developer</span>
-                  <span className="block text-black/70">Snow Dream Studios GmbH · Nov 2024 - Jan 2025</span>
+                  <span className="font-semibold block">Frontend Developer</span>
+                  <span className="text-black/65 text-[13px]">Snow Dream Studios GmbH · Nov 2024 - Jan 2025</span>
                 </li>
                 <li>
-                  <span className="font-semibold">Frontend Developer</span>
-                  <span className="block text-black/70">Spirit Idea Tech System · Jun 2023 - Oct 2024</span>
+                  <span className="font-semibold block">Frontend Developer</span>
+                  <span className="text-black/65 text-[13px]">Spirit Idea Tech System · Jun 2023 - Oct 2024</span>
                 </li>
               </ul>
             </div>
-            {/* Tags */}
-            <div className="flex flex-wrap gap-2 mt-2 md:mt-10 font-lexend">
+
+            <div className="relative z-10 flex flex-wrap gap-1.5 font-lexend mb-4">
               {[
                 'HTML',
                 'CSS',
@@ -69,41 +77,42 @@ const Popup = ({ close }) => {
               ].map((tag) => (
                 <span
                   key={tag}
-                  className="bg-gray-800 text-gray-400 text-[12px] md:text-sm px-3 py-1 rounded-full"
+                  className="bg-gray-800 text-gray-400 text-[11px] px-2.5 py-1 rounded-full"
                 >
                   #{tag}
                 </span>
               ))}
             </div>
-            {/* MERN Stack Section */}
-            <div className="mt-0 md:mt-6">
-              {/* <div className="flex space-x-8 mt-12">
-                <img src={react} alt="MongoDB" className="w-12" />
-                <img src={laravel} alt="Express.js" className="w-12" />
-                <img src={tailwind} alt="React.js" className="w-12" />
-              </div> */}
+
+            <div className="relative z-10 pb-1">
               <Download />
             </div>
           </div>
 
           {/* Illustration Section */}
-          <div className='bg-[#1c1d25] h-full relative text-white p-10 md:p-20 overflow-hidden'>
-            <span className='z-0 text-[190px] absolute -bottom-14 -right-40 text-[#27282f] font-bold heading-font'>DEVELO</span>
-            <div className="flex justify-between items-start">
-              <div className="md:w-full w-[150px] relative flex items-start justify-start">
-                {/* Lazy Loading Image */}
-                <LazyLoadImage
-                  src={mypic2}
-                  alt="My Picture"
-                  effect="blur" // You can also use "opacity" or "black-and-white"
-                  className="z-10 w-full h-full object-cover mx-auto"
-                />
-              </div>
-              <button className="absolute right-1 md:right-4 top-1 md:top-4 text-gray-400 hover:text-white focus:outline-none font-lexend" onClick={close} > <Button /> </button>
+          <div className="relative bg-[#1c1d25] text-white order-1 md:order-2 min-h-[220px] md:min-h-0 md:h-full flex items-center justify-center p-6 sm:p-8 overflow-hidden">
+            <span className="pointer-events-none z-0 text-[120px] sm:text-[160px] absolute -bottom-10 -right-24 text-[#27282f] font-bold heading-font select-none">
+              DEVELO
+            </span>
+
+            <button
+              className="absolute right-3 top-3 z-20 text-gray-400 hover:text-white focus:outline-none"
+              onClick={close}
+              aria-label="Close about popup"
+            >
+              <Button />
+            </button>
+
+            <div className="relative z-10 w-[70%] max-w-[280px] mx-auto">
+              <LazyLoadImage
+                src={mypic2}
+                alt="Masab Qurban"
+                effect="blur"
+                className="w-full h-auto object-contain"
+              />
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );
