@@ -22,11 +22,32 @@ const Popup = ({ close }) => {
           <div className='relative h-full bg-[#ececec] text-black p-5 lg:p-20 overflow-hidden'>
             <span className='z-0 text-[190px] absolute -top-14 -right-24 text-[#e6e6e6] font-bold heading-font'>ABOUT</span>
             <h2 className="relative z-10 text-[#1595b6] text-3xl md:text-4xl font-semibold font-lexend">ABOUT ME</h2>
-            <h2 className="relative z-10 text-[#1595b6] text-lg mb-2 md:mb-4 font-HubotSans font-medium">Full Stack Web Developer</h2>
+            <h2 className="relative z-10 text-[#1595b6] text-lg mb-2 md:mb-4 font-HubotSans font-medium">Software Engineer | Full Stack Architect</h2>
             <p className="mb-2 md:mb-4 relative z-10 font-HubotSans font-medium text-sm md:text-base">
-              I help business owners and busy web developers to design & develop creative websites that fit their vision
-              and attract the visitors to stay for ever. Technologies and tools that I use to create such awesome websites.
+              Full-Stack Engineer passionate about crafting digital experiences that drive business value. I build scalable SaaS platforms and high-performance web apps with React.js, Next.js, Node.js, and PostgreSQL — sharp interfaces, solid backends, and systems that hold up in production.
             </p>
+
+            <div className="relative z-10 mb-3 md:mb-5">
+              <h3 className="text-[#1595b6] text-base md:text-lg font-semibold font-lexend mb-2">Experience</h3>
+              <ul className="space-y-2 font-HubotSans font-medium text-sm md:text-base">
+                <li>
+                  <span className="font-semibold">Senior Software Engineer</span>
+                  <span className="block text-black/70">VendAxis FZ-LLC · Feb 2026 - Present</span>
+                </li>
+                <li>
+                  <span className="font-semibold">Software Engineer (Full Stack)</span>
+                  <span className="block text-black/70">VendAxis FZ-LLC · Feb 2025 - Jan 2026</span>
+                </li>
+                <li>
+                  <span className="font-semibold">Frontend Developer</span>
+                  <span className="block text-black/70">Snow Dream Studios GmbH · Nov 2024 - Jan 2025</span>
+                </li>
+                <li>
+                  <span className="font-semibold">Frontend Developer</span>
+                  <span className="block text-black/70">Spirit Idea Tech System · Jun 2023 - Oct 2024</span>
+                </li>
+              </ul>
+            </div>
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mt-2 md:mt-10 font-lexend">
               {[
